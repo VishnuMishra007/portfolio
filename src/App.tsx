@@ -30,10 +30,10 @@ const App: React.FC = () => {
               <div className="flex flex-col mt-10">
                 <About />
               </div>
-              <div className="flex flex-wrap flex-col mt-8 justify-center max-h-[100vh]">
+              <div className="flex flex-wrap flex-col mt-8 justify-center max-h-[90vh]">
                 <Projects />
               </div>
-              <div className="flex flex-wrap flex-col mt-8 justify-center max-h-[100vh]">
+              <div className="flex flex-wrap flex-col mt-8 justify-center max-h-[90vh]">
                 <Contact />
               </div>
             </main>
