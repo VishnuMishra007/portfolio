@@ -1,0 +1,1 @@
+export const headingText = "I am a Front-End / Full-Stack Developer. I am currently working at Infogain as a Senior Consultant (Development).";

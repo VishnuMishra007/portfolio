@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Responsive web portfolio built with React and Parcel. Showcases skills, projects, and contact info—deployed via GitHub Pages with custom domain support.",
+  "source": "public/index.html",
+  "scripts": {
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html --public-url /portfolio/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VishnuMishra007/portfolio.git"
+  },
+  "author": "Vishnu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VishnuMishra007/portfolio/issues"
+  },
+  "homepage": "https://github.com/VishnuMishra007/portfolio",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tailwindcss/postcss": "^4.1.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "gh-pages": "^6.3.0",
+    "parcel": "^2.15.4",
+    "typescript": "^5.8.3"
+  }
+}

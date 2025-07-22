@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+
+/* Full height setup */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Flex layout for root */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* App container */
+.app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header at top */
+header {
+  background: #f6f8fa;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: inset 0 calc(0.0625rem * -2) #d1d9e0;
+}
+
+/* Main fills space */
+main {
+  flex: 1;
+  padding: 0 0 1rem 0;
+}
+
+/* Footer at bottom */
+footer {
+  background: #fff;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+@keyframes float-stars {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(100px, 300px); }
+}
+.animate-stars {
+  opacity: 0.4;
+  animation: float-stars 6s linear infinite;
+  will-change: transform;
+}
+
+
+.profile-description {
+  background-image: url('https://images.pexels.com/photos/29506610/pexels-photo-29506610.jpeg');
+  opacity: 85%;
+}
+
+
+.connectionmodalcontainer{
+    display: flex;
+    padding: 15px;
+    position: fixed;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: rgba(2,6,12,.9);
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 9999;
+    gap: 30px;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.refreshbtton{
+    color: #fff;
+    border: unset;
+    background: unset;
+}
+
+.refreshbtton:hover{
+    font-weight: bold;
+    transform: scale(1.25);
+}
+
+.online_status{
+    display: flex;
+    position: relative;
+}
+
+/* @keyframes shimmer {
+    0% {
+    background-position: -100% 0;
+    }
+    100% {
+    background-position: 400% 0;
+    }
+} */
+
+.phantom-card{
+    background: linear-gradient(-45deg , #eee 40%, #fafafa 50%, #eee 60%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow ease 0.3s;
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+   to {
+      background-position-x: 0%
+   }
+}
