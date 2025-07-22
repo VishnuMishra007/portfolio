@@ -21,25 +21,30 @@ const App: React.FC = () => {
     <div id="app" className="app">
       {isLoading ? (
         <>
-          <div className="relative z-10 w-full md:flex md:w-auto">
+          <div className="relative z-10 w-full">
             <Header />
-            <main>
-              <div className="profile-description bg-no-repeat bg-cover bg-center min-h-[100vh]">
+
+            <main className="flex flex-col w-full">
+              <section className="profile-description bg-no-repeat bg-cover bg-center min-h-screen">
                 <ProfileDescription />
-              </div>
-              <div className="flex flex-col mt-10 max-h-[90vh]">
+              </section>
+
+              <section className="flex flex-col mt-10">
                 <About />
-              </div>
-              <div className="flex flex-wrap flex-col mt-20 justify-center max-h-[100vh]">
+              </section>
+
+              <section className="flex flex-col mt-16 px-4 gap-24">
                 <Projects />
-              </div>
-              <div className="flex flex-wrap flex-col mt-8 justify-center max-h-[100vh]">
+              </section>
+
+              <section className="flex flex-col mt-16 px-4 gap-24">
                 <Contact />
-              </div>
+              </section>
             </main>
+
+            <ConnectionModalUI />
+            <Footer />
           </div>
-          <ConnectionModalUI />
-          <Footer />
         </>
       ) : (
         <Shimmer />
