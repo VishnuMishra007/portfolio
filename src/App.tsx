@@ -27,13 +27,13 @@ const App: React.FC = () => {
               <div className="profile-description bg-no-repeat bg-cover bg-center min-h-[100vh]">
                 <ProfileDescription />
               </div>
-              <div className="flex flex-col mt-10">
+              <div className="flex flex-col mt-10 max-h-[90vh]">
                 <About />
               </div>
-              <div className="flex flex-wrap flex-col mt-8 justify-center max-h-[90vh]">
+              <div className="flex flex-wrap flex-col mt-20 justify-center max-h-[100vh]">
                 <Projects />
               </div>
-              <div className="flex flex-wrap flex-col mt-8 justify-center max-h-[90vh]">
+              <div className="flex flex-wrap flex-col mt-8 justify-center max-h-[100vh]">
                 <Contact />
               </div>
             </main>
