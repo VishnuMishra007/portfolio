@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md min-w-100vw h-20">
       <div>
-        <div className="flex items-center justify-between px-6 py-4"> {/* from-[#609bbe] via-pink-500 to-[#499529] */}
+        <div className="flex items-center justify-between px-6 py-4">
           <h1 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-pink-400 to-blue-600 drop-shadow-lg text-center tracking-wide">
             Vishnu Mishra, Sr. Consultant (Development) @Infogain
           </h1>
