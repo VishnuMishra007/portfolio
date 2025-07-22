@@ -1,29 +1,4 @@
-// export const Header: React.FC = () => {
-//   return (
-//     <header className="fixed flex justify-between min-w-100vw top-0 z-50 w-full h-17">
-//       {/* // <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex "> */}
-//       <h1 className="p-1 flex text-[clamp(0.5rem, 1vw, 1rem)] font-semibold min-w-[20vw]">
-//         Vishnu Mishra
-//       </h1>
-//       <nav className="flex justify-end min-w-[75vw] max-h-fit text-[clamp(1rem, 2.5vw, 2rem)] font-bold">
-//         <ul className="flex gap-x-3 font-semibold">
-//           {["Home", "About", "Projects", "Contact"].map((item, idx) => (
-//             <li
-//               key={idx}
-//               className="px-2 py-1 rounded-lg cursor-pointer hover:bg-[#0c718de3] hover:text-white hover:border transform hover:scale-105 transition-transform duration-200 will-change-transform overflow-hidden text-ellipsis whitespace-nowrap"
-//             >
-//               {item}
-//             </li>
-//           ))}
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// };
-
 import { useState } from "react";
-
-// import { useState } from "react";
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +10,7 @@ export const Header: React.FC = () => {
           <h1 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-pink-400 to-blue-600 drop-shadow-lg text-center tracking-wide">
             Vishnu Mishra, Sr. Consultant (Development) @Infogain
           </h1>
-
-          {/* Hamburger Icon (visible on small screens) */}
+            {/* Hamburger Icon (visible on small screens) */}
           <button
             className="md:hidden flex flex-col gap-1"
             onClick={() => setIsOpen(!isOpen)}
@@ -62,16 +36,20 @@ export const Header: React.FC = () => {
 
         {/* Mobile Menu (visible when hamburger is clicked) */}
         {isOpen && (
-          <nav className="md:hidden px-6 pb-4 flex flex-col gap-4 font-semibold">
+          <nav className={`md:hidden fixed top-20 right-0 h-fit w-40 shadow-lg z-50 rounded-lg bg-transparent transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
+            <div className="flex flex-col px-6 py-8 gap-2 font-semibold rounded-lg">
             {["Home", "About", "Projects", "Contact"].map((item) => (
-              <a
+              <><a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="hover:text-blue-500 transition-colors"
+                className="hover:text-blue-500 transition-colors bg-white w-30 rounded-lg"
               >
                 {item}
               </a>
+              <hr/>
+              </>
             ))}
+            </div>
           </nav>
         )}
       </div>
