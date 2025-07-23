@@ -30,13 +30,13 @@ export const ProfileDescription: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="flex items-center gap-2 bg-blue-600 text-white w-45 p-2 rounded mb-4 cursor-pointer hover:scale-105">
+          <button className="flex items-center gap-2 bg-[#0a4b5de3] text-white font-bold w-45 text-sm p-2 rounded shadow-lg mb-4 cursor-pointer hover:scale-105 transition-transform duration-200">
+            Download Resume
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQufS70hj8RecdNq3Zx4UsqqZnEZNWNEKK0TQ&s"
               alt="Download icon"
               className="w-5 h-5"
             />
-            Download Resume
           </button>
         </a>
         {/* <div className="flex items-start flex-col p-6 mt-[25dvh] sm:pl-[2vw] w-full sm:w-[45vw] shadow-lg transition-all"> */}
